@@ -1,0 +1,9 @@
+/build/
+/curl/
+/glew/
+/glfw/
+/libpng/
+/libuv/
+/out/
+/zlib/
+/mapbox-gl-native/
