@@ -1,8 +1,8 @@
 #!/bin/sh
 
-rm -rf build
+set -ex
 common="-DCMAKE_INSTALL_PREFIX=$PWD/out -DCMAKE_PREFIX_PATH=$PWD/out"
-G="Visual Studio 12"
+G=$CMAKE_GENERATOR
 
 cmake -Hzlib -Bbuild/zlib $common -G"$G"
 cmake --build build/zlib --target install --config Debug
@@ -25,7 +25,6 @@ cmake --build build/glfw --target install --config Debug
 cmake --build build/glfw --target install --config Release
 
 cmake -Hglew/build/cmake -Bbuild/glew $common -G"$G" -DBUILD_UTILS=0
-cmake --build build/glew --target install --config Debug
 cmake --build build/glew --target install --config Release
 
 cmake -Hmapbox-gl-native -Bbuild/mapbox-gl-native $common -G"$G"
