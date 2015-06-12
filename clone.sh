@@ -5,5 +5,6 @@ git clone --depth 1 --no-single-branch https://github.com/tamaskenez/glfw-shaxbe
 git clone --depth 1 --no-single-branch https://github.com/tamaskenez/libuv-cmake.git libuv
 git clone --recursive https://github.com/tamaskenez/mapbox-gl-native-cmake.git mapbox-gl-native
 git clone --depth 1 --no-single-branch https://github.com/tamaskenez/glew.git
-
+git clone --depth 1 --no-single-branch https://github.com/tamaskenez/libjpeg-cmake.git libjpeg
+git clone --depth 1 --no-single-branch https://bitbucket.org/tamaskenez/nunicode.git
 
