@@ -7,4 +7,4 @@ git clone --recursive https://github.com/tamaskenez/mapbox-gl-native-cmake.git m
 git clone --depth 1 --no-single-branch https://github.com/tamaskenez/glew.git
 git clone --depth 1 --no-single-branch https://github.com/tamaskenez/libjpeg-cmake.git libjpeg
 git clone --depth 1 --no-single-branch https://bitbucket.org/tamaskenez/nunicode.git
-
+git clone --depth 1 --no-single-branch https://github.com/tamaskenez/libzip

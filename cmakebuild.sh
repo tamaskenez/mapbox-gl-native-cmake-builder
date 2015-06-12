@@ -8,6 +8,10 @@ cmake -Hzlib -Bbuild/zlib $common -G"$G"
 cmake --build build/zlib --target install --config Debug
 cmake --build build/zlib --target install --config Release
 
+cmake -Hlibzip -Bbuild/libzip $common -G"$G"
+cmake --build build/libzip --target install --config Debug
+cmake --build build/libzip --target install --config Release
+
 cmake -Hlibpng -Bbuild/libpng $common -G"$G"
 cmake --build build/libpng --target install --config Debug
 cmake --build build/libpng --target install --config Release
