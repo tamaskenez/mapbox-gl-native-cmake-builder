@@ -41,6 +41,9 @@ cmake --build build/glew --target install --config Release
 
 cmake -Hmapbox-gl-native -Bbuild/mapbox-gl-native $common -G"$G"
 
+cmake -Hsqlite3 -Bbuild/sqlite3 $common -G"$G"
+cmake --build build/sqlite3 --target install --config Debug
+cmake --build build/sqlite3 --target install --config Release
 
 cmake -H. -Bbuild/super $common -G"$G"
 

@@ -8,3 +8,5 @@ git clone --depth 1 --no-single-branch https://github.com/tamaskenez/glew.git
 git clone --depth 1 --no-single-branch https://github.com/tamaskenez/libjpeg-cmake.git libjpeg
 git clone --depth 1 --no-single-branch https://bitbucket.org/tamaskenez/nunicode.git
 git clone --depth 1 --no-single-branch https://github.com/tamaskenez/libzip
+git clone --depth 1 --no-single-branch https://github.com/tamaskenez/sqlite3-cmake sqlite3
+
