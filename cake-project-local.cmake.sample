@@ -1,0 +1,15 @@
+# duplicate this file as cake-project-local.cmake and edit
+# you can set user specific project settings in this file:
+
+# Your generator of choice (specify if you use other than the default one)
+#
+#     set(CMAKE_GENERATOR "Xcode")
+#
+# Additional cmake args, for example, to find Boost
+#
+#     list(APPEND CMAKE_ARGS -DBOOST_ROOT=...)
+#
+
+# also, you can append or overwrite any settings from the cake-project.cmake file
+
+# for full listing see <CAKE_ROOT>/cake-project-sample/cmake
