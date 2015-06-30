@@ -8,8 +8,6 @@
 # executed multiple times. They are no-ops if the repo has already
 # been cloned, built or installed from the same commit.
 
-set -ex
-
 export CAKE_ROOT="$PWD/_cake"
 export PATH="$CAKE_ROOT/bin":$PATH
 
