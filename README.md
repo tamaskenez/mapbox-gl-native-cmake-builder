@@ -15,7 +15,7 @@ a compiler bug or a bug I introduced during the porting.
 # Prerequisites
 
  - Modern C++ compiler that supports `-std=c++14` (clang++ 3.5 or later
-   or g++-4.9 or later). 
+   or g++-4.9 or later).
  - [Boost](http://boost.org) (headers and system+thread libs)
  - [CMake 3.1](http://cmake.org) or later
  - unix-like shell, for Windows [MSysGit](https://git-scm.com/download/win)
@@ -23,7 +23,20 @@ a compiler bug or a bug I introduced during the porting.
 
 # Building
 
-From this directory, enter
+Make sure `find_package(Boost)` will find your Boost headers and libraries.
+If needed:
+
+- set the appropriate `BOOST_*` environment variables in your shell, or
+- duplicate the file `cake-project-local.cmake.sample` to
+  `cake-project-local.cmake` and edit.
+  You can append the `BOOST_*` variables to `CMAKE_ARGS`.
+
+You can also use `cake-project-local.cmake` to set other, global
+CMake options for all dependencies and the `mbgl` project. For example,
+you may need to set `CMAKE_GENERATOR` to use a generator other than
+the default one.
+
+After that, cd into the root of this repo and enter
 
     source init.sh
 
@@ -44,4 +57,21 @@ or open in your IDE (Visual Studio or Xcode)
 
     cake mbgl --ide
 
+and build the `app` target from there.
 
+# Running
+
+- Set your `MAPBOX_ACCESS_TOKEN` environment variable
+
+- Make sure the application can access the shared dependent libraries.
+
+  In Visual Studio you need to open the `app` target's property pages,
+  select the `Debugging` page and add `PATH=<this-dir>\_out\bin:%PATH%` to
+  the `Environment` text box. You can also set your
+  `MAPBOX_ACCESS_TOKEN` here.
+
+  In Unix environments you may need to set `LD_LIBRARY_PATH`.
+
+- You need to start `app` from its directory. In Visual Studio, on
+  the same property page, change the value of `Working Directory`
+  from `$(ProjectDir)` to `$(TargetDir)`
