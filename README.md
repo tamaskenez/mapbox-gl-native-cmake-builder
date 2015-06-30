@@ -4,10 +4,10 @@ my fork of [mapbox-gl-native](https://github.com/mapbox/mapbox-gl-native).
 This builder, using the [cake-build-tool](https://github.com/tamaskenez/cake),
 automatically clones, builds and installs dependencies of mapbox-gl-native.
 
-Currently these repos (the builder and mapbox-gl-native-cmake) are developed
+Currently these repos (this builder and mapbox-gl-native-cmake) are developed
 and tested on Windows and Linux. The current status on Windows is that
-the project builds find with VS 2015 RC but in Debug mode there's an
-iterator-not-dereferencable assertion. In Release mode it does show
+the project builds fine with VS 2015 RC but when running it, in Debug mode
+there's an iterator-not-dereferencable assertion. In Release mode it does show
 the map and UI is working but many labels are missing or not displayed
 correctly (rotated). I'm waiting for Visual Studio 2015 to see if it's
 a compiler bug or a bug I introduced during the porting.
